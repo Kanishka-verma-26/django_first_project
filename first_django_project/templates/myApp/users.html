@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+<div>
+    <h1>Here are your users for first app:</h1>
+    <div class="djangotwo">
+        {% if users %}
+        <ol>
+            {# now we need to insert table rows and the table rows are going to be connected to the actual model,#}
+                {# so we need to somehow add in logic here that loops through every row in the access_records.#}
+
+            {% for person in users %}
+            <li>User Info</li>
+            <ul>
+                <li>First Name: {{ person.First_Name}}</li>
+                <li>Last Name: {{ person.Last_Name}}</li>
+                <li>Email: {{ person.Email}}</li>
+
+            </ul>
+            {% endfor %}
+        </ol>
+        {% endif %}
+    </div>
+</div>
+
+</body>
+</html>
